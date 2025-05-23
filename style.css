@@ -1,0 +1,40 @@
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  background: #f4f4f4;
+  padding: 1rem;
+  margin: 0;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 0 1rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+main.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+h1.dots {
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  border-bottom: 2px dotted #000;
+  padding-bottom: 0.5em;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4f4f4;
+}
