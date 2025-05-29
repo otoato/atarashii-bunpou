@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posto Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-large">新しい文法</div>
+    <nav>
+      <ul>
+        <li><a href="concept.html">Concept</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="posto.html" aria-current="page">Posto Music</a></li>
+        <li><a href="zine.html">ZINE</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="posto-music">
+      <h1 class="section-title">Posto Music</h1>
+
+      <div class="music-player">
+        <h2>1. 曲を聴く</h2>
+        <audio controls>
+          <source src="audio/posto_track.mp3" type="audio/mpeg">
+          お使いのブラウザはaudioタグに対応していません。
+        </audio>
+      </div>
+
+      <div class="posto-records">
+        <h2>2. ポストの観察記録（1週間）</h2>
+        <p>観察対象のマンションのポストを1週間記録。下記イラストをクリックすると詳細が見られます。</p>
+
+        <div class="posto-illustration">
+          <img src="images/posto_illustration.jpg" alt="ポストのイラスト" usemap="#posto-map" />
+          <map name="posto-map">
+            <area shape="rect" coords="10,10,100,100" href="#room101" alt="101号室" />
+            <area shape="rect" coords="110,10,200,100" href="#room102" alt="102号室" />
+            <!-- 他の部屋も同様に追加 -->
+          </map>
+        </div>
+
+        <div id="room101" class="posto-detail">
+          <h3>101号室の記録</h3>
+          <p>月曜日から木曜日までポストは空だったが、金曜にチラシが入れられ、そのまま土曜まで残っていた。</p>
+        </div>
+
+        <div id="room102" class="posto-detail">
+          <h3>102号室の記録</h3>
+          <p>火曜の朝に封筒が投函され、当日夜に回収された。非常に規則的な利用が見られた。</p>
+        </div>
+        <!-- 他の部屋の詳細も追加可能 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 新しい文法</p>
+  </footer>
+</body>
+</html>
