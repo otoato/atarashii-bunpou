@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - 新しい文法</title>
+  <title>Contact | 新しい文法</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,8 +11,9 @@
     <div class="logo-large">新しい文法</div>
     <nav>
       <ul>
-        <li><a href="concept.html">コンセプト</a></li>
+        <li><a href="concept.html">Concept</a></li>
         <li><a href="archive.html">Archive</a></li>
+        <li><a href="posto.html">Posto Music</a></li>
         <li><a href="zine.html">ZINE</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
@@ -20,13 +21,24 @@
   </header>
 
   <main>
-    <section>
-      <h1 class="section-title">Contact</h1>
-      <p>
-        ご質問やご感想は、以下のメールアドレスまでお気軽にどうぞ。<br />
-        <a href="mailto:your.email@example.com">your.email@example.com</a><br />
-        または、<a href="https://yourwebsite.example.com" target="_blank" rel="noopener noreferrer">個人ウェブサイト</a>もご覧ください。
-      </p>
+    <section class="contact-section">
+      <h1 class="section-title">お問い合わせ</h1>
+      <p>ご意見、ご質問などありましたら、下記のフォームまたはメールにてお気軽にご連絡ください。</p>
+
+      <form action="https://example.com/form-handler" method="post" class="contact-form">
+        <label for="name">お名前</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">メールアドレス</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">お問い合わせ内容</label><br />
+        <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+
+        <button type="submit">送信</button>
+      </form>
+
+      <p>直接メールされたい場合はこちら: <a href="mailto:info@example.com">info@example.com</a></p>
     </section>
   </main>
 
