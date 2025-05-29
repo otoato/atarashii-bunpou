@@ -1,101 +1,52 @@
-/* Google Fonts - 游明朝体風のNoto Serif JP */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: "YuMincho", "Yu Mincho", "游明朝体", serif;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Noto Serif JP', serif;
-  background-color: #fafafa;
+  line-height: 1.6;
+  background: #fff;
   color: #111;
-  line-height: 1.8;
-  padding: 0 1rem;
-}
-
-header {
-  padding: 2rem 0;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 2rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 0;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  background-color: #f9f9f9;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 400;
-  transition: color 0.3s ease;
+  color: #000;
+  font-size: 1rem;
 }
 
-nav a:hover,
-nav a[aria-current="page"] {
-  color: #000;
-  border-bottom: 2px solid #000;
+nav ul li a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-ul {
-  padding-left: 1rem;
-  list-style-type: disc;
-}
-
-audio {
-  display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-}
-
-a.zine-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #111;
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-a.zine-link:hover {
-  background-color: #333;
+  padding: 2rem;
+  max-width: 720px;
+  margin: auto;
 }
 
 footer {
   text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid #ccc;
-  margin-top: 3rem;
+  padding: 1rem;
   font-size: 0.9rem;
-  color: #666;
+  background: #f0f0f0;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #333;
 }
