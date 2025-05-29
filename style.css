@@ -1,3 +1,5 @@
+/* style.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
 /* リセット */
@@ -10,27 +12,26 @@
 /* フォント全体 */
 body {
   font-family: '游明朝', 'Yu Mincho', 'Noto Serif JP', serif;
-  background: #fff;
+  background-color: #fff;
   color: #111;
+  font-size: 16px;
   line-height: 1.7;
-  font-size: 18px;
   letter-spacing: 0.05em;
   padding: 20px;
 }
 
-/* ヘッダー全体を横並びに */
+/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
-  margin-bottom: 40px;
 }
 
-/* ロゴのテキストを大きく */
+/* 大きなロゴ文字 */
 .logo-large {
-  font-size: 3.6rem; /* 大きく */
+  font-size: 3.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1.1;
@@ -38,21 +39,21 @@ header {
   user-select: none;
 }
 
-/* ナビゲーションメニュー */
+/* ナビメニュー */
 nav ul {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 24px;
 }
 
 nav ul li {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 nav ul li a {
-  color: #111;
   text-decoration: none;
+  color: #111;
   transition: color 0.3s ease;
 }
 
@@ -61,24 +62,27 @@ nav ul li a[aria-current="page"] {
   color: #555;
 }
 
-/* メインコンテンツ */
+/* メイン */
 main {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
-/* 大見出し */
-h1 {
-  font-size: 3.2rem;
+/* コンセプト見出し */
+main h1 {
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  margin-bottom: 1.2rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
-/* 段落 */
-p {
-  margin-bottom: 1.2rem;
+/* コンセプト本文 */
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
 }
 
 /* フッター */
@@ -91,18 +95,15 @@ footer {
   margin-top: 80px;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ */
 @media screen and (max-width: 600px) {
   .logo-large {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+  }
+  main h1 {
+    font-size: 1.8rem;
   }
   nav ul {
     gap: 16px;
-  }
-  nav ul li {
-    font-size: 1rem;
-  }
-  h1 {
-    font-size: 2.4rem;
   }
 }
