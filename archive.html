@@ -2,135 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archive | 新しい文法</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archive - 新しい文法</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* 必要最低限のスタイル */
-    body {
-      font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-      margin: 0; padding: 0;
-      background: #fafafa;
-      color: #222;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo-large {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0; padding: 0;
-      display: flex;
-      gap: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a[aria-current="page"] {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #222;
-      padding-bottom: 0.3rem;
-    }
-    .search-form fieldset {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .search-form label {
-      user-select: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .archive-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .sound-item {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      padding: 1rem;
-      width: calc(33.333% - 1rem);
-      box-sizing: border-box;
-    }
-    .sound-title {
-      background: #eee;
-      border: none;
-      width: 100%;
-      padding: 0.5rem 1rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-align: left;
-      border-radius: 6px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .sound-detail {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-    .hidden {
-      display: none;
-    }
-    audio {
-      width: 100%;
-      margin-top: 0.3rem;
-      outline-offset: 2px;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #777;
-      font-size: 0.9rem;
-      border-top: 1px solid #ddd;
-      margin-top: 4rem;
-    }
-    @media (max-width: 768px) {
-      .sound-item {
-        width: calc(50% - 1rem);
-      }
-    }
-    @media (max-width: 480px) {
-      .sound-item {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="logo-large">新しい文法</div>
     <nav>
       <ul>
-        <li><a href="concept.html">Concept</a></li>
+        <li><a href="concept.html">コンセプト</a></li>
         <li><a href="archive.html" aria-current="page">Archive</a></li>
-        <li><a href="posto.html">Posto Music</a></li>
         <li><a href="zine.html">ZINE</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -138,76 +20,18 @@
   </header>
 
   <main>
-    <section class="search-section">
-      <h1 class="section-title">音の検索</h1>
-      <form class="search-form" id="filter-form">
-        <fieldset>
-          <legend>分類カテゴリ</legend>
-          <label><input type="checkbox" class="filter" value="付加の音" /> 付加の音</label>
-          <label><input type="checkbox" class="filter" value="無付加の音" /> 無付加の音</label>
-          <label><input type="checkbox" class="filter" value="間の音" /> 間の音</label>
-          <label><input type="checkbox" class="filter" value="モノの音" /> モノの音</label>
-          <label><input type="checkbox" class="filter" value="ヒトの音" /> ヒトの音</label>
-        </fieldset>
-      </form>
-    </section>
-
-    <section class="archive-section">
-      <h2 class="section-title">あいうえお順アーカイブ</h2>
-      <div class="archive-grid" id="archive-grid">
-        <!-- 例：音アイテム -->
-        <div class="sound-item" data-category="ヒトの音,無付加の音">
-          <button class="sound-title" type="button">あさのしたく</button>
-          <div class="sound-detail hidden">
-            <audio controls src="audio/asano_shitaku.mp3"></audio>
-            <p>分類：ヒトの音／無付加の音</p>
-            <p>説明：朝の支度時に聞こえる足音や物音の断片。</p>
-          </div>
-        </div>
-
-        <div class="sound-item" data-category="モノの音,付加の音">
-          <button class="sound-title" type="button">いすを引く音</button>
-          <div class="sound-detail hidden">
-            <audio controls src="audio/isu_hiku.mp3"></audio>
-            <p>分類：モノの音／付加の音</p>
-            <p>説明：椅子を引いたときの擦れる音。</p>
-          </div>
-        </div>
-
-        <!-- 追加する音アイテムをここに並べる -->
-      </div>
+    <section>
+      <h1 class="section-title">音のアーカイブ</h1>
+      <p>
+        家の中の様々な音を集め、分類し、ルール化しています。<br />
+        このアーカイブは、生活の中に潜む音の文法を探るためのデータベースです。
+      </p>
+      <!-- 音の一覧や詳細はここに追加可能 -->
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 新しい文法</p>
   </footer>
-
-  <script>
-    // 詳細開閉ボタン
-    document.querySelectorAll('.sound-title').forEach(button => {
-      button.addEventListener('click', () => {
-        const detail = button.nextElementSibling;
-        detail.classList.toggle('hidden');
-      });
-    });
-
-    // カテゴリフィルタ処理
-    const filters = document.querySelectorAll('.filter');
-    filters.forEach(filter => {
-      filter.addEventListener('change', () => {
-        const selected = Array.from(filters)
-          .filter(f => f.checked)
-          .map(f => f.value);
-
-        document.querySelectorAll('.sound-item').forEach(item => {
-          const categories = item.dataset.category.split(',');
-          // 選択なしなら全部表示、選択あればいずれかが含まれるものだけ表示
-          const show = selected.length === 0 || selected.some(sel => categories.includes(sel));
-          item.style.display = show ? 'block' : 'none';
-        });
-      });
-    });
-  </script>
 </body>
 </html>
