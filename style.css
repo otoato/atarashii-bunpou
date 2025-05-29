@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
-/* 基本リセット */
+/* リセット */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 全体のフォント設定 */
+/* 全体フォント */
 body {
   font-family: '游明朝', 'Yu Mincho', 'Noto Serif JP', serif;
-  background-color: #fff;
+  background: #fff;
   color: #111;
   line-height: 1.7;
   font-size: 18px;
@@ -18,36 +18,24 @@ body {
   padding: 20px;
 }
 
-/* リンクのスタイル */
-a {
-  text-decoration: none;
-  color: #111;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #555;
-}
-
 /* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-/* 左上ロゴ（新しい文法） */
+/* 左上ロゴ */
 .site-title a {
-  font-size: 2.4rem;            /* 大きめサイズ */
+  font-size: 3rem; /* かなり大きめ */
   font-weight: 700;
   color: #111;
   text-decoration: none;
   letter-spacing: 0.1em;
   line-height: 1.2;
-}
-.site-title a:hover {
-  color: #555;
 }
 
 /* ナビゲーション */
@@ -62,13 +50,24 @@ nav ul li {
   font-size: 1.1rem;
 }
 
-/* メインコンテンツ */
-main {
-  max-width: 900px;
-  margin: 40px auto 0 auto;
+nav ul li a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* 大見出し */
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+  color: #555;
+}
+
+/* メイン */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 見出し */
 h1 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -77,27 +76,9 @@ h1 {
   line-height: 1.2;
 }
 
-/* 中見出し */
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 1rem;
-  border-left: 4px solid #222;
-  padding-left: 12px;
-}
-
 /* 段落 */
 p {
   margin-bottom: 1.2rem;
-}
-
-/* 手書き風ロゴ画像がある場合 */
-.logo-large {
-  display: block;
-  width: 300px;
-  max-width: 90vw;
-  margin: 0 auto 40px auto;
 }
 
 /* フッター */
@@ -110,17 +91,15 @@ footer {
   margin-top: 80px;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 2.4rem;
   }
-
   nav ul {
     gap: 16px;
   }
-
   .site-title a {
-    font-size: 1.8rem; /* モバイルでも十分目立つ大きさに */
+    font-size: 2rem;
   }
 }
