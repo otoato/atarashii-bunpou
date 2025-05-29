@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Archive</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hidden { display: none; }
+    .archive-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .sound-item { border: 1px solid #ccc; padding: 1rem; width: 200px; }
+    .search-form { margin-bottom: 2rem; }
+  </style>
 </head>
 <body>
   <header>
@@ -26,20 +32,20 @@
       <form class="search-form">
         <fieldset>
           <legend>分類カテゴリ</legend>
-          <label><input type="checkbox" name="category" value="付加の音" /> 付加の音</label>
-          <label><input type="checkbox" name="category" value="無付加の音" /> 無付加の音</label>
-          <label><input type="checkbox" name="category" value="間の音" /> 間の音</label>
-          <label><input type="checkbox" name="category" value="モノの音" /> モノの音</label>
-          <label><input type="checkbox" name="category" value="ヒトの音" /> ヒトの音</label>
+          <label><input type="checkbox" class="filter" value="付加の音"> 付加の音</label>
+          <label><input type="checkbox" class="filter" value="無付加の音"> 無付加の音</label>
+          <label><input type="checkbox" class="filter" value="間の音"> 間の音</label>
+          <label><input type="checkbox" class="filter" value="モノの音"> モノの音</label>
+          <label><input type="checkbox" class="filter" value="ヒトの音"> ヒトの音</label>
         </fieldset>
       </form>
     </section>
 
     <section class="archive-section">
       <h2 class="section-title">あいうえお順アーカイブ</h2>
-      <div class="archive-grid">
-        <!-- 各音アイテムをここに配置 -->
-        <div class="sound-item">
+      <div class="archive-grid" id="archive-grid">
+        <!-- 音アイテム（例） -->
+        <div class="sound-item" data-category="ヒトの音,無付加の音">
           <button class="sound-title">あさのしたく</button>
           <div class="sound-detail hidden">
             <audio controls src="audio/asano_shitaku.mp3"></audio>
@@ -47,7 +53,16 @@
             <p>説明：朝の支度時に聞こえる足音や物音の断片。</p>
           </div>
         </div>
-        <!-- さらに音アイテムを追加 -->
+
+        <div class="sound-item" data-category="モノの音,付加の音">
+          <button class="sound-title">いすを引く音</button>
+          <div class="sound-detail hidden">
+            <audio controls src="audio/isu_hiku.mp3"></audio>
+            <p>分類：モノの音／付加の音</p>
+            <p>説明：椅子を引いたときの擦れる音。</p>
+          </div>
+        </div>
+        <!-- 他にも追加可能 -->
       </div>
     </section>
   </main>
@@ -57,10 +72,27 @@
   </footer>
 
   <script>
+    // 詳細開閉
     document.querySelectorAll('.sound-title').forEach(button => {
       button.addEventListener('click', () => {
         const detail = button.nextElementSibling;
         detail.classList.toggle('hidden');
+      });
+    });
+
+    // カテゴリフィルタ
+    const filters = document.querySelectorAll('.filter');
+    filters.forEach(filter => {
+      filter.addEventListener('change', () => {
+        const selected = Array.from(filters)
+          .filter(f => f.checked)
+          .map(f => f.value);
+        
+        document.querySelectorAll('.sound-item').forEach(item => {
+          const itemCats = item.dataset.category.split(',');
+          const match = selected.length === 0 || selected.some(sel => itemCats.includes(sel));
+          item.style.display = match ? 'block' : 'none';
+        });
       });
     });
   </script>
