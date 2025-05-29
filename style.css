@@ -1,84 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
-/* リセット */
+/* 基本リセット */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ベース設定 */
 body {
   font-family: '游明朝', 'Yu Mincho', 'Noto Serif JP', serif;
   background-color: #fff;
   color: #111;
-  font-size: 16px;
   line-height: 1.7;
+  font-size: 18px;
   letter-spacing: 0.05em;
   padding: 20px;
 }
 
-/* ヘッダー全体 */
+/* リンク装飾 */
+a {
+  text-decoration: none;
+  color: #111;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #555;
+}
+
+/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
 
-/* ロゴ（左上の新しい文法） */
+/* ロゴ（大きめの文字） */
 .logo-large {
-  font-size: 3.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  color: #111;
-  user-select: none;
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 
-/* ナビゲーション */
+/* ナビゲーションメニュー */
 nav ul {
   display: flex;
   list-style: none;
   gap: 24px;
 }
-
 nav ul li {
   font-weight: 500;
-  font-size: 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #111;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a[aria-current="page"] {
-  color: #555;
+  font-size: 1.1rem;
 }
 
 /* メインコンテンツ */
 main {
   max-width: 900px;
-  margin: 40px auto 0;
+  margin: 40px auto 0 auto;
 }
 
-/* コンセプト見出し（控えめに） */
+/* セクションタイトル */
 .section-title {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 /* 段落 */
-main p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+p {
+  margin-bottom: 1.2rem;
 }
 
 /* フッター */
@@ -91,17 +81,18 @@ footer {
   margin-top: 80px;
 }
 
-/* モバイル対応 */
+/* レスポンシブ */
 @media screen and (max-width: 600px) {
   .logo-large {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   nav ul {
     gap: 16px;
+    font-size: 1rem;
   }
 }
