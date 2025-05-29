@@ -1,67 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>新しい文法 | New Grammar</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        margin: 0;
-        font-family: "YuMincho", "Yu Mincho", serif;
-        background-color: #fff;
-        color: #111;
-      }
-      nav {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 1.5rem;
-        font-size: 0.95rem;
-      }
-      nav a {
-        text-decoration: none;
-        color: #111;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      .logo {
-        text-align: center;
-        margin: 3rem 0 1.5rem;
-      }
-      .logo img {
-        max-width: 400px;
-        width: 90%;
-        height: auto;
-      }
-      .content {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 0 1rem 4rem;
-        font-size: 1rem;
-        line-height: 1.9;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新しい文法 / New Grammar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="archive.html">Archive</a>
-      <a href="grammar.html">New Grammar</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="grammar.html">Grammar</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="logo">
-      <img src="handwritten_title.png" alt="新しい文法" />
-    </div>
+  <main>
+    <section class="hero">
+      <img src="logo.png" alt="新しい文法" class="logo">
+    </section>
 
-    <div class="content">
+    <section class="concept">
+      <h1>Concept</h1>
       <p>
-        私たちの生活の中にある音は、気づかぬうちに私たちの時間や行動を形づくっています。
-        このプロジェクトは、日常の中に潜む無意識の音を集め、整理し、観察することで、
-        その固有性や関係性、不確実性を見出し、新しい音楽の「文法」として提示する試みです。
+        「新しい文法」は、生活音から音楽を生み出す試みです。<br>
+        家の中にある無意識的な音を録音し、それを分類し、ルール化することで、<br>
+        生活に潜む音の文法を発見し、それをAIが受け取り、音楽として再構築します。
       </p>
-    </div>
-  </body>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 新しい文法 / New Grammar</p>
+  </footer>
+</body>
 </html>
