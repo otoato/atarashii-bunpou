@@ -5,118 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archive - 新しい文法</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .filter-section {
-      background: #f0f0f0;
-      padding: 20px;
-      margin: 30px 0;
-      border-radius: 10px;
-    }
-    .filter-group {
-      margin-bottom: 15px;
-    }
-    .filter-group label {
-      margin-right: 15px;
-      font-size: 1rem;
-    }
-    .archive-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .archive-item {
-      background: #fff;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: box-shadow 0.2s;
-    }
-    .archive-item:hover {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .archive-item h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-    .archive-detail {
-      display: none;
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="logo-large">新しい文法</div>
     <nav>
       <ul>
-        <li><a href="concept.html">コンセプト</a></li>
+        <li><a href="concept.html">Concept</a></li>
         <li><a href="archive.html" aria-current="page">Archive</a></li>
         <li><a href="zine.html">ZINE</a></li>
+        <li><a href="post-music.html">Post Music</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h1 class="section-title">音のアーカイブ</h1>
-      <p>
-        家の中の様々な音を集め、分類し、ルール化しています。<br />
-        このアーカイブは、生活の中に潜む音の文法を探るためのデータベースです。
-      </p>
-
-      <div class="filter-section">
-        <h2>音の検索</h2>
-
-        <div class="filter-group">
-          <strong>付加分類:</strong><br />
-          <label><input type="checkbox" name="type" value="付加の音"> 付加の音</label>
-          <label><input type="checkbox" name="type" value="無付加の音"> 無付加の音</label>
-          <label><input type="checkbox" name="type" value="間の音"> 間の音</label>
-        </div>
-
-        <div class="filter-group">
-          <strong>モノ／ヒト分類:</strong><br />
-          <label><input type="checkbox" name="source" value="モノの音"> モノの音</label>
-          <label><input type="checkbox" name="source" value="ヒトの音"> ヒトの音</label>
-        </div>
-      </div>
-
-      <div class="archive-list" id="archiveList">
-        <div class="archive-item" onclick="toggleDetail(this)">
-          <h3>あいさつの音</h3>
-          <div class="archive-detail">
-            <p>人の声によるあいさつ。<br>分類：ヒトの音・付加の音</p>
-            <audio controls src="sounds/aisatsu.mp3"></audio>
-          </div>
-        </div>
-        <div class="archive-item" onclick="toggleDetail(this)">
-          <h3>いすを引く音</h3>
-          <div class="archive-detail">
-            <p>椅子が床をこする音。<br>分類：モノの音・無付加の音</p>
-            <audio controls src="sounds/isu.mp3"></audio>
-          </div>
-        </div>
-        <!-- 他の音も追加可能 -->
-      </div>
-    </section>
+    <h1 class="section-title">Archive</h1>
+    <p>ここに音のアーカイブや検索機能を実装予定です。</p>
   </main>
 
   <footer>
     <p>&copy; 2025 新しい文法</p>
   </footer>
-
-  <script>
-    function toggleDetail(item) {
-      const detail = item.querySelector('.archive-detail');
-      const isVisible = detail.style.display === 'block';
-      document.querySelectorAll('.archive-detail').forEach(d => d.style.display = 'none');
-      if (!isVisible) detail.style.display = 'block';
-    }
-  </script>
 </body>
 </html>
