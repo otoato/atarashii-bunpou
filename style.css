@@ -1,21 +1,22 @@
-/* style.css */
-
+/* Google Fonts の読み込み */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
 
+/* ベーススタイル */
 body {
   font-family: 'Noto Serif JP', serif;
-  background: #faf9f7;
-  color: #222;
+  background: #faf9f7;    /* 優しいクリーム色系背景 */
+  color: #222;            /* 濃いグレーで読みやすく */
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.7;       /* 行間ゆったり */
   font-size: 18px;
 }
 
+/* リンクの基本とホバー */
 a {
-  color: #555;
+  color: #555;                      /* 控えめなグレー */
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid transparent;  /* 下線はホバー時のみ */
   transition: border-color 0.3s;
 }
 a:hover, a[aria-current="page"] {
@@ -23,6 +24,7 @@ a:hover, a[aria-current="page"] {
   color: #000;
 }
 
+/* ヘッダー */
 header {
   padding: 24px 32px;
   border-bottom: 1px solid #ddd;
@@ -30,19 +32,21 @@ header {
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  position: sticky;
+  position: sticky; /* スクロール時に固定 */
   top: 0;
   z-index: 10;
 }
 
+/* ロゴの大きいスタイル */
 .logo-large {
   font-weight: 700;
   font-size: 32px;
   letter-spacing: 0.04em;
   color: #222;
-  user-select: none;
+  user-select: none; /* テキスト選択不可 */
 }
 
+/* ナビゲーション */
 nav ul {
   list-style: none;
   margin: 0;
@@ -50,16 +54,18 @@ nav ul {
   display: flex;
   gap: 28px;
 }
-
 nav li {
+  /* 必要ならここに追加 */
 }
 
+/* メインコンテンツ */
 main {
   max-width: 720px;
   margin: 48px auto;
   padding: 0 24px;
 }
 
+/* セクションタイトル */
 .section-title {
   font-weight: 700;
   font-size: 28px;
@@ -69,30 +75,32 @@ main {
   color: #444;
 }
 
+/* 段落スタイル */
 .concept p, section p {
   margin-bottom: 24px;
   color: #444;
   font-weight: 400;
 }
 
+/* 順序リスト（概念説明用） */
 .concept ol {
   padding-left: 24px;
   margin-top: 0;
   color: #444;
 }
-
 .concept ol li {
   margin-bottom: 20px;
   font-weight: 400;
   letter-spacing: 0.03em;
 }
-
+/* <br>タグの余白調整 */
 .concept ol li br {
   content: "";
   display: block;
   margin-bottom: 8px;
 }
 
+/* フッター */
 footer {
   text-align: center;
   color: #999;
@@ -102,6 +110,7 @@ footer {
   margin-top: 64px;
 }
 
+/* レスポンシブ対応（画面幅600px以下） */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
