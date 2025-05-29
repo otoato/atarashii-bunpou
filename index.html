@@ -3,15 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Concept | 新しい文法</title>
+  <title>コンセプト - 新しい文法</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "ヒラギノ角ゴ Pro", "メイリオ", meiryo, sans-serif;
+      color: #333;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+    .logo-large {
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a[aria-current="page"] {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #222;
+      padding-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    .concept p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      white-space: pre-line;
+    }
+    ol {
+      padding-left: 20px;
+      font-size: 1rem;
+      color: #444;
+    }
+    ol li {
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    ol li strong {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #999;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo-large">新しい文法</div>
     <nav>
       <ul>
-        <li><a href="index.html" aria-current="page">Concept</a></li>
+        <li><a href="concept.html" aria-current="page">コンセプト</a></li>
         <li><a href="archive.html">Archive</a></li>
         <li><a href="zine.html">ZINE</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -22,41 +108,18 @@
   <main>
     <section class="concept">
       <h1 class="section-title">コンセプト</h1>
-      <p class="lead">
-        <strong>「新しい文法」</strong>は、<br />
-        <em>「日常の再構築」</em>を実践するプロジェクトです。
+      <p>
+        「新しい文法」は、「日常の再構築」の実践としてのプロジェクトである。<br />
+        生活空間に広がる「日常の音」に注目し、<br />
+        そこに潜む、「関係性」・「偶然性」・「不確実性」・「固有性」を可視聴化することを目指す。
       </p>
-      <p class="lead">
-        生活空間に広がる<strong>「日常の音」</strong>に耳をすまし、<br />
-        そこに潜む<strong>関係性・偶然性・不確実性・固有性</strong>を<br />
-        <span class="highlight">可視聴化</span>することを目指します。
-      </p>
-
-      <ol class="steps">
-        <li>
-          <h3>1. 集める</h3>
-          <p>無意識下の音を可聴化する。<br />家の中にある音、生活に紛れていた音を録音する。</p>
-        </li>
-        <li>
-          <h3>2. 並べる</h3>
-          <p>日常のサウンドスケープを再確認し、そこにある固有性を可視化する。<br />音の繰り返しや変化に気づく。</p>
-        </li>
-        <li>
-          <h3>3. 分類する</h3>
-          <p>どんな時に、どんな行動とともに音が鳴るのかを考える。<br />時間・動作・空間などと結びつける。</p>
-        </li>
-        <li>
-          <h3>4. 文法をつくる（ルール化）</h3>
-          <p>生活の中の習慣や特徴を見つめ、可視化する。<br />それらを音楽に転用できる「文法＝ルール」として言語化する。</p>
-        </li>
-        <li>
-          <h3>5. きっかけをつくる</h3>
-          <p>作った文法を曲に展開するためのきっかけをつくる。<br />生活空間に潜む関係性・偶然性・不確実性・固有性に注目する。</p>
-        </li>
-        <li>
-          <h3>6. AIが作曲する</h3>
-          <p>文法ときっかけをもとに、AIが作曲する。</p>
-        </li>
+      <ol>
+        <li><strong>集める</strong> 無意識下の音を可聴化する。家の中にある音、生活に紛れていた音を録音する。</li>
+        <li><strong>並べる</strong> 日常のサウンドスケープを再確認し、そこにある固有性を可視化する。音の繰り返しや変化に気づく。</li>
+        <li><strong>分類する</strong> どんな時に、どんな行動とともに音が鳴るのかを考える。時間・動作・空間などと結びつける。</li>
+        <li><strong>文法をつくる（ルール化）</strong> 生活の中の習慣や特徴を見つめ、可視化する。それらを音楽に転用できる「文法＝ルール」として言語化する。</li>
+        <li><strong>きっかけをつくる</strong> 作った文法を曲に展開するためのきっかけをつくる。生活空間に潜む関係性・偶然性・不確実性・固有性に注目する。</li>
+        <li><strong>AIが作曲する</strong> 文法ときっかけをもとに、AIが作曲する。</li>
       </ol>
     </section>
   </main>
