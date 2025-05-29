@@ -51,9 +51,6 @@ nav ul {
   gap: 28px;
 }
 
-nav li {
-}
-
 main {
   max-width: 720px;
   margin: 48px auto;
@@ -94,6 +91,48 @@ footer {
   padding: 36px 0;
   border-top: 1px solid #ddd;
   margin-top: 64px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+label {
+  font-weight: 700;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: 'Noto Serif JP', serif;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
 }
 
 @media (max-width: 600px) {
