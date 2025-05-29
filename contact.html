@@ -13,33 +13,41 @@
       <ul>
         <li><a href="concept.html">Concept</a></li>
         <li><a href="archive.html">Archive</a></li>
-        <li><a href="posto.html">Posto Music</a></li>
         <li><a href="zine.html">ZINE</a></li>
+        <li><a href="post-music.html">Post Music</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="contact-section">
-      <h1 class="section-title">お問い合わせ</h1>
-      <p>ご意見・ご質問などは、以下のフォームまたはメールでご連絡ください。</p>
+    <h1 class="section-title">Contact</h1>
 
-      <form action="https://example.com/form-handler" method="post" class="contact-form">
-        <label for="name">お名前</label><br />
-        <input type="text" id="name" name="name" required /><br /><br />
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <div>
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-        <label for="email">メールアドレス</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+      <div>
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-        <label for="message">メッセージ</label><br />
-        <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+      <div>
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
 
-        <button type="submit">送信</button>
-      </form>
+      <button type="submit">送信</button>
+    </form>
 
-      <p>メールでのご連絡はこちら：<a href="mailto:info@example.com">info@example.com</a></p>
-    </section>
+    <p style="margin-top: 32px;">
+      または、メールで直接ご連絡ください：<br />
+      <a href="mailto:your-email@example.com">your-email@example.com</a><br />
+      またはポートフォリオ：<br />
+      <a href="https://your-portfolio.example.com" target="_blank">https://your-portfolio.example.com</a>
+    </p>
   </main>
 
   <footer>
