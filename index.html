@@ -1,89 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新しい文法</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f9f9f9;
-      color: #111;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-    header img {
-      max-width: 400px;
-      width: 80%;
-      height: auto;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #111;
-      font-size: 1rem;
-      position: relative;
-    }
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #111;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
-    main {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="handwritten_title.png" alt="新しい文法">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新しい文法 | New Grammar</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "YuMincho", "Yu Mincho", serif;
+        background-color: #fff;
+        color: #111;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: #111;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .logo {
+        text-align: center;
+        margin: 3rem 0 1.5rem;
+      }
+      .logo img {
+        max-width: 400px;
+        width: 90%;
+        height: auto;
+      }
+      .content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 1rem 4rem;
+        font-size: 1rem;
+        line-height: 1.9;
+      }
+    </style>
+  </head>
+  <body>
     <nav>
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="sound.html">家の音アーカイブ</a></li>
-        <li><a href="grammar.html">一家に一冊「新しい文法」</a></li>
-        <li><a href="contact.html">コンタクト</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="archive.html">Archive</a>
+      <a href="grammar.html">New Grammar</a>
+      <a href="contact.html">Contact</a>
     </nav>
-  </header>
-  <main>
-    <section>
-      <h2>コンセプト</h2>
+
+    <div class="logo">
+      <img src="handwritten_title.png" alt="新しい文法" />
+    </div>
+
+    <div class="content">
       <p>
-        「新しい文法」は、生活の中に埋もれた音を採集し、それらを観察・分類・ルール化することで、生活のリズムや関係性から音楽を生み出そうとする実験です。
+        私たちの生活の中にある音は、気づかぬうちに私たちの時間や行動を形づくっています。
+        このプロジェクトは、日常の中に潜む無意識の音を集め、整理し、観察することで、
+        その固有性や関係性、不確実性を見出し、新しい音楽の「文法」として提示する試みです。
       </p>
-    </section>
-  </main>
-</body>
+    </div>
+  </body>
 </html>
