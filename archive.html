@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Archive - 新しい文法</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,8 +11,9 @@
     <div class="logo-large">新しい文法</div>
     <nav>
       <ul>
-        <li><a href="concept.html">コンセプト</a></li>
+        <li><a href="concept.html">Concept</a></li>
         <li><a href="archive.html" aria-current="page">Archive</a></li>
+        <li><a href="posto.html">Posto Music</a></li>
         <li><a href="zine.html">ZINE</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -20,18 +21,48 @@
   </header>
 
   <main>
-    <section>
-      <h1 class="section-title">音のアーカイブ</h1>
-      <p>
-        家の中の様々な音を集め、分類し、ルール化しています。<br />
-        このアーカイブは、生活の中に潜む音の文法を探るためのデータベースです。
-      </p>
-      <!-- 音の一覧や詳細はここに追加可能 -->
+    <section class="search-section">
+      <h1 class="section-title">音の検索</h1>
+      <form class="search-form">
+        <fieldset>
+          <legend>分類カテゴリ</legend>
+          <label><input type="checkbox" name="category" value="付加の音" /> 付加の音</label>
+          <label><input type="checkbox" name="category" value="無付加の音" /> 無付加の音</label>
+          <label><input type="checkbox" name="category" value="間の音" /> 間の音</label>
+          <label><input type="checkbox" name="category" value="モノの音" /> モノの音</label>
+          <label><input type="checkbox" name="category" value="ヒトの音" /> ヒトの音</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="archive-section">
+      <h2 class="section-title">あいうえお順アーカイブ</h2>
+      <div class="archive-grid">
+        <!-- 各音アイテムをここに配置 -->
+        <div class="sound-item">
+          <button class="sound-title">あさのしたく</button>
+          <div class="sound-detail hidden">
+            <audio controls src="audio/asano_shitaku.mp3"></audio>
+            <p>分類：ヒトの音／無付加の音</p>
+            <p>説明：朝の支度時に聞こえる足音や物音の断片。</p>
+          </div>
+        </div>
+        <!-- さらに音アイテムを追加 -->
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 新しい文法</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.sound-title').forEach(button => {
+      button.addEventListener('click', () => {
+        const detail = button.nextElementSibling;
+        detail.classList.toggle('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
