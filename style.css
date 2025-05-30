@@ -1,3 +1,5 @@
+/* style.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
 
 body {
@@ -15,6 +17,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
+  white-space: nowrap; /* ← 追加：リンク内改行防止 */
 }
 a:hover, a[aria-current="page"] {
   border-bottom: 2px solid #333;
@@ -31,6 +34,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  flex-wrap: wrap; /* ← 追加：幅が足りないときに折り返し */
+  gap: 16px;       /* ← 追加：ヘッダー内余白 */
 }
 
 .logo-large {
@@ -47,6 +52,7 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 28px;
+  flex-wrap: wrap; /* ← 追加：メニュー折り返し対応 */
 }
 
 main {
@@ -68,7 +74,6 @@ main {
   margin-bottom: 24px;
   color: #444;
   font-weight: 400;
-  white-space: pre-line; /* 文章の改行反映対応 */
 }
 
 .concept ol {
@@ -82,39 +87,6 @@ main {
   font-weight: 400;
   letter-spacing: 0.03em;
 }
-
-/* ここから新規追加・調整 */
-/* 「新しい文法」説明文の強調スタイル */
-.concept strong {
-  font-weight: 700;
-  color: #333;
-}
-
-/* リストの番号を少し見やすく */
-.concept ol {
-  counter-reset: step-counter;
-  list-style: none;
-}
-
-.concept ol li {
-  position: relative;
-  padding-left: 36px;
-  margin-bottom: 24px;
-}
-
-.concept ol li::before {
-  counter-increment: step-counter;
-  content: counter(step-counter) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 700;
-  color: #666;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* フッターやフォームは元のまま */
 
 footer {
   text-align: center;
@@ -177,14 +149,14 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
+  nav a {
+    font-size: 16px;
+  }
   main {
     padding: 0 16px;
     margin: 32px auto;
   }
   .logo-large {
     font-size: 28px;
-  }
-  nav a {
-    font-size: 16px;
   }
 }
