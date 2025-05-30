@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Post Music - 新しい文法</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .zenmai-container {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .zenmai-image {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .zenmai-image:hover {
+      opacity: 0.8;
+    }
+
+    .zenmai-data {
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 16px;
+      margin-top: 24px;
+      color: #444;
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,4 +40,45 @@
         <li><a href="concept.html">Concept</a></li>
         <li><a href="archive.html">Archive</a></li>
         <li><a href="zine.html">ZINE</a></li>
-        <li><a href="
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="zenmai-container">
+      <img
+        src="images/post-illustration.jpg"
+        alt="ポストの観察イラスト"
+        class="zenmai-image"
+        onclick="toggleZenmai()"
+      />
+      <div class="zenmai-data" id="zenmaiData">
+        1234556  
+        5671415  
+        6151417  
+        2222111  
+        0000111  
+        2345654  
+        4444544  
+        6765544  
+        1111111  
+        5543210  
+        0001234  
+        ...（ここに必要なだけ羅列を続けてください）
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 新しい文法</p>
+  </footer>
+
+  <script>
+    function toggleZenmai() {
+      const data = document.getElementById("zenmaiData");
+      data.style.display = data.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
