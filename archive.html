@@ -21,12 +21,25 @@
   </header>
 
   <main>
-    <h1 class="section-title">Archive</h1>
-    <p>ここに音のアーカイブや検索機能を実装予定です。</p>
+    <h1 class="section-title">音のアーカイブ</h1>
+
+    <div>
+      <label for="categoryFilter">分類で絞り込み:</label>
+      <select id="categoryFilter">
+        <option value="all">すべて</option>
+        <option value="relational">関係性の音</option>
+        <option value="human">ヒトの音</option>
+        <option value="object">モノの音</option>
+      </select>
+    </div>
+
+    <ul id="soundList"></ul>
   </main>
 
   <footer>
     <p>&copy; 2025 新しい文法</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
